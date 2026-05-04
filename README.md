@@ -8,8 +8,6 @@
 
 ### CRADLE Bench
 
-Dataset and fine-tuned models for crisis detection in social media text (Reddit), covering seven crisis types with clinician annotations.
-
 [![Dataset](https://img.shields.io/badge/🤗%20Dataset-Cradle--Bench-FFD21E?labelColor=FFD21E&color=FFD21E&style=flat)](https://huggingface.co/datasets/SungJoo/Cradle-Bench)
 
 Fine-tuned models (trained on consensus vs. unanimous subsets of the ensemble-labeled training corpus):
@@ -21,10 +19,37 @@ Fine-tuned models (trained on consensus vs. unanimous subsets of the ensemble-la
 
 ### CRADLE Dialogue
 
-Extension to multi-turn dialogue, with turn-level crisis detection annotations over synthetic clinical conversations.
-
 [![Dataset](https://img.shields.io/badge/🤗%20Dataset-Cradle--Dialogue-FFD21E?labelColor=FFD21E&color=FFD21E&style=flat)](https://huggingface.co/datasets/SungJoo/Cradle-Dialogue)
 [![Model](https://img.shields.io/badge/🤗%20Model-Qwen3--32B%20·%202epoch-3DBE8A?style=flat)](https://huggingface.co/SungJoo/cradle-dialogue-qwen3-32b-2epoch)
+
+---
+
+## Dataset Overview
+
+CRADLE BENCH is constructed from Reddit posts spanning crisis-related and general mental health subreddits, with annotations provided by licensed clinical psychologists and social workers. Each post is labeled with one or more of the following crisis categories, along with a temporal dimension (ongoing vs. past).
+
+### Crisis Categories
+
+| Category | Description |
+|---|---|
+| Suicide Ideation (Active) | Explicit intent, method, or preparation for suicide (C-SSRS levels 4–5) |
+| Suicide Ideation (Passive) | Wish to die without a plan or active intent (C-SSRS levels 1–3) |
+| Self-Harm | Intentional non-suicidal self-injury or urges, without suicidal intent |
+| Domestic Violence | Abuse between intimate partners — physical, emotional, financial, or coercive |
+| Rape | Non-consensual sexual acts involving penetration, by force or coercion |
+| Sexual Harassment | Unwanted sexual advances or contact not involving penetration |
+| Child Abuse / Endangerment | Physical/sexual abuse or neglect of minors by an adult |
+
+### Data Statistics
+
+| Split | Posts | Labels | Avg. labels/post |
+|---|---|---|---|
+| Dev | 420 | 443 | 1.05 |
+| Test | 600 | 670 | 1.12 |
+| Train (Consensus) | 4,181 | 4,649 | 1.11 |
+| Train (Unanimous) | 3,058 | 3,257 | 1.07 |
+
+The dev and test sets are manually annotated by clinicians. Training labels are automatically generated via majority-vote ensemble of GPT-5, Claude-4-Sonnet, and Gemini-2.5-Pro. The **Unanimous** subset includes only instances where all three models agree; the **Consensus** subset includes cases where at least two agree.
 
 ---
 
