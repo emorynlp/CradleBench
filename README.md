@@ -4,37 +4,33 @@
 
 ---
 
-
 ## Hugging Face Resources
 
 ### CRADLE Bench
 
 Dataset and fine-tuned models for crisis detection in social media text (Reddit), covering seven crisis types with clinician annotations.
 
-- Dataset: [SungJoo/Cradle-Bench](https://huggingface.co/datasets/SungJoo/Cradle-Bench)
+[![Dataset](https://img.shields.io/badge/🤗%20Dataset-Cradle--Bench-FFD21E?labelColor=FFD21E&color=FFD21E&style=flat)](https://huggingface.co/datasets/SungJoo/Cradle-Bench)
 
 Fine-tuned models (trained on consensus vs. unanimous subsets of the ensemble-labeled training corpus):
 
-| Model | Training Set | Link |
-|---|---|---|
-| LLaMA-3.3-70B | Unanimous | [SungJoo/llama3.3-70b-CRADLE-unanimous](https://huggingface.co/SungJoo/llama3.3-70b-CRADLE-unanimous) |
-| LLaMA-3.3-70B | Consensus | [SungJoo/llama3.3-70b-CRADLE-consensus](https://huggingface.co/SungJoo/llama3.3-70b-CRADLE-consensus) |
-| Qwen2.5-72B | Unanimous | [SungJoo/Qwen2.5-72b-CRADLE-unanimous](https://huggingface.co/SungJoo/Qwen2.5-72b-CRADLE-unanimous) |
-| Qwen2.5-72B | Consensus | [SungJoo/Qwen2.5-72b-CRADLE-consensus](https://huggingface.co/SungJoo/Qwen2.5-72b-CRADLE-consensus) |
+[![Model](https://img.shields.io/badge/🤗%20Model-LLaMA--3.3--70B%20·%20unanimous-4B91F1?style=flat)](https://huggingface.co/SungJoo/llama3.3-70b-CRADLE-unanimous)
+[![Model](https://img.shields.io/badge/🤗%20Model-LLaMA--3.3--70B%20·%20consensus-7FB3F5?style=flat)](https://huggingface.co/SungJoo/llama3.3-70b-CRADLE-consensus)
+[![Model](https://img.shields.io/badge/🤗%20Model-Qwen2.5--72B%20·%20unanimous-4B91F1?style=flat)](https://huggingface.co/SungJoo/Qwen2.5-72b-CRADLE-unanimous)
+[![Model](https://img.shields.io/badge/🤗%20Model-Qwen2.5--72B%20·%20consensus-7FB3F5?style=flat)](https://huggingface.co/SungJoo/Qwen2.5-72b-CRADLE-consensus)
 
 ### CRADLE Dialogue
 
 Extension to multi-turn dialogue, with turn-level crisis detection annotations over synthetic clinical conversations.
 
-- Dataset: [SungJoo/Cradle-Dialogue](https://huggingface.co/datasets/SungJoo/Cradle-Dialogue)
-- Model: [SungJoo/cradle-dialogue-qwen3-32b-2epoch](https://huggingface.co/SungJoo/cradle-dialogue-qwen3-32b-2epoch)
+[![Dataset](https://img.shields.io/badge/🤗%20Dataset-Cradle--Dialogue-FFD21E?labelColor=FFD21E&color=FFD21E&style=flat)](https://huggingface.co/datasets/SungJoo/Cradle-Dialogue)
+[![Model](https://img.shields.io/badge/🤗%20Model-Qwen3--32B%20·%202epoch-3DBE8A?style=flat)](https://huggingface.co/SungJoo/cradle-dialogue-qwen3-32b-2epoch)
 
 ---
 
 ## Citation
 
 If you use our data or models, please cite the EACL 2026 paper below.
-
 
 **CRADLE Bench: A Clinician-Annotated Benchmark for Multi-Faceted Mental Health Crisis and Safety Risk Detection**  
 Grace Byun, Rebecca Lipschutz, Sean T. Minton, Abigail Powers, Jinho D. Choi  
