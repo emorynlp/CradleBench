@@ -6,7 +6,7 @@
 
 ## Hugging Face Resources
 
-### CRADLE Bench
+- ### CRADLE Bench
 
 [![Dataset](https://img.shields.io/badge/🤗%20Dataset-Cradle--Bench-FFD21E?labelColor=FFD21E&color=FFD21E&style=flat)](https://huggingface.co/datasets/SungJoo/Cradle-Bench)
 
@@ -17,7 +17,7 @@ Fine-tuned models (trained on consensus vs. unanimous subsets of the ensemble-la
 [![Model](https://img.shields.io/badge/🤗%20Model-Qwen2.5--72B%20·%20unanimous-4B91F1?style=flat)](https://huggingface.co/SungJoo/Qwen2.5-72b-CRADLE-unanimous)
 [![Model](https://img.shields.io/badge/🤗%20Model-Qwen2.5--72B%20·%20consensus-7FB3F5?style=flat)](https://huggingface.co/SungJoo/Qwen2.5-72b-CRADLE-consensus)
 
-### CRADLE Dialogue
+- ### CRADLE Dialogue
 
 [![Dataset](https://img.shields.io/badge/🤗%20Dataset-Cradle--Dialogue-FFD21E?labelColor=FFD21E&color=FFD21E&style=flat)](https://huggingface.co/datasets/SungJoo/Cradle-Dialogue)
 [![Model](https://img.shields.io/badge/🤗%20Model-Qwen3--32B%20·%202epoch-3DBE8A?style=flat)](https://huggingface.co/SungJoo/cradle-dialogue-qwen3-32b-2epoch)
@@ -49,7 +49,9 @@ CRADLE BENCH is constructed from Reddit posts spanning crisis-related and genera
 | Train (Consensus) | 4,181 | 4,649 | 1.11 |
 | Train (Unanimous) | 3,058 | 3,257 | 1.07 |
 
-The dev and test sets are manually annotated by clinicians. Training labels are automatically generated via majority-vote ensemble of GPT-5, Claude-4-Sonnet, and Gemini-2.5-Pro. The **Unanimous** subset includes only instances where all three models agree; the **Consensus** subset includes cases where at least two agree.
+The dev and test sets are manually annotated by clinicians. Training labels are automatically generated via majority-vote ensemble of GPT-5, Claude-4-Sonnet, and Gemini-2.5-Pro. 
+
+The **Unanimous** subset includes only instances where all three models agree; the **Consensus** subset includes cases where at least two agree.
 
 ---
 
